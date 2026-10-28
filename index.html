@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TecInfo — Suporte Técnico em Informática</title>
+<meta name="description" content="Formatação, reparos, manutenção e limpeza preventiva de computadores.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#inicio" class="logo">&lt;Tec<span>Info</span>/&gt;</a>
+  <button class="menu-btn" aria-label="Abrir menu">☰</button>
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#processo">Como trabalho</a>
+    <a href="#dicas">Dicas</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <p class="mono">$ ./iniciar_suporte --profissional</p>
+  <h1>Seu computador <span class="destaque">rápido, limpo</span> e seguro.</h1>
+  <p class="sub">Técnico em informática especializado em formatação, reparos, manutenção e limpeza preventiva de computadores e notebooks.</p>
+  <div class="acoes">
+    <a href="#servicos" class="btn">Ver serviços</a>
+    <a href="#contato" class="btn btn-ghost">Solicitar orçamento</a>
+  </div>
+  <div class="stats">
+    <div><strong data-count="500">0</strong><span>máquinas atendidas</span></div>
+    <div><strong data-count="98">0</strong><span>% de satisfação</span></div>
+    <div><strong data-count="24">0</strong><span>h de prazo médio</span></div>
+  </div>
+</section>
+
+<section id="servicos">
+  <h2><span class="mono">01.</span> Serviços</h2>
+  <p class="intro">Clique em um serviço para ver os detalhes técnicos.</p>
+  <div class="grid" id="lista-servicos"></div>
+</section>
+
+<section id="processo">
+  <h2><span class="mono">02.</span> Como trabalho</h2>
+  <ol class="etapas">
+    <li><b>Diagnóstico</b><p>Análise de hardware e software para identificar a causa real do problema.</p></li>
+    <li><b>Orçamento</b><p>Explicação clara do que será feito, sem custos surpresa.</p></li>
+    <li><b>Execução</b><p>Serviço realizado com ferramentas adequadas e proteção antiestática.</p></li>
+    <li><b>Testes e entrega</b><p>Testes de estresse, relatório do serviço e orientações de uso.</p></li>
+  </ol>
+</section>
+
+<section id="dicas">
+  <h2><span class="mono">03.</span> Dicas de manutenção</h2>
+  <div class="dica-box">
+    <p id="dica-texto"></p>
+    <button class="btn" id="nova-dica">Próxima dica →</button>
+  </div>
+</section>
+
+<section id="contato">
+  <h2><span class="mono">04.</span> Contato</h2>
+  <form id="form">
+    <input name="nome" placeholder="Seu nome" required>
+    <input name="email" type="email" placeholder="Seu e-mail" required>
+    <select name="servico" id="select-servico" required><option value="">Escolha o serviço</option></select>
+    <textarea name="msg" rows="4" placeholder="Descreva o problema" required></textarea>
+    <button class="btn" type="submit">Enviar solicitação</button>
+    <p id="form-ok" class="ok" hidden></p>
+  </form>
+</section>
+
+<footer>© <span id="ano"></span> TecInfo — Projeto do curso profissionalizante de Informática.</footer>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-box">
+    <button class="fechar" aria-label="Fechar">×</button>
+    <h3 id="modal-titulo"></h3>
+    <p id="modal-desc"></p>
+    <ul id="modal-passos"></ul>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
